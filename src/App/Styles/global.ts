@@ -9,7 +9,7 @@ export default createGlobalStyle`
     }
 
     body{
-        background: ${({ theme }) => theme.plain.light};
+        background: ${({ theme }) => theme.background};
         color:  ${({ theme }) => theme.gray.dark};
     }
 

@@ -20,6 +20,8 @@ declare module 'styled-components' {
       dark: string;
     };
 
+    background: string;
+
     danger: string;
 
     success: string;
