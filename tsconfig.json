@@ -17,7 +17,10 @@
 
     "baseUrl": "./src",
     "paths": {
-      "~Styles/*": ["./App/Styles/*"]
+      "~Styles/*": ["./App/Styles/*"],
+      "@Pages/*": ["./App/Pages/*"],
+      "@Components/*": ["./App/components/*"],
+      "@Assets/*": ["./App/assets/*"]
     },
 
     /* Linting */

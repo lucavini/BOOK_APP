@@ -1,6 +1,6 @@
 import { Container, MenuNavigation, Buttom } from './styles';
 
-import logo from '../../../assets/images/logo_small.svg';
+import logo from '@Assets/images/logo_small.svg';
 
 function LateralMenu() {
   return (

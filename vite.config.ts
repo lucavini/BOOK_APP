@@ -11,6 +11,18 @@ export default defineConfig({
         find: '~Styles',
         replacement: path.resolve(__dirname, 'src/App/Styles'),
       },
+      {
+        find: '@Pages',
+        replacement: path.resolve(__dirname, 'src/App/Pages'),
+      },
+      {
+        find: '@Components',
+        replacement: path.resolve(__dirname, 'src/App/components'),
+      },
+      {
+        find: '@Assets',
+        replacement: path.resolve(__dirname, 'src/App/assets'),
+      },
     ],
   },
 });
