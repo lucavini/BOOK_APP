@@ -1,5 +1,14 @@
+import Template from '../../components/template';
+
 function Books() {
-  return <div>Books</div>;
+  return (
+    <Template
+      title="Livros"
+      subtitle="Gerencie os livros do seu estabelecimento"
+    >
+      Livros
+    </Template>
+  );
 }
 
 export default Books;

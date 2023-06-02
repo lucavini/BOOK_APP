@@ -1,5 +1,11 @@
+import Template from '../../components/template';
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <Template title="Vendas realizadas" subtitle="Visualize todas as vendas">
+      Vendas
+    </Template>
+  );
 }
 
 export default Home;
