@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled('nav')`
   width: 108px;
@@ -19,7 +19,7 @@ export const MenuNavigation = styled('div')`
   flex-direction: column;
 `;
 
-export const Buttom = styled(Link)`
+export const Buttom = styled(NavLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,4 +29,8 @@ export const Buttom = styled(Link)`
   height: 100px;
   text-decoration: none;
   color: ${({ theme }) => theme.gray.main};
+
+  &.active {
+    color: ${({ theme }) => theme.primary.main};
+  }
 `;

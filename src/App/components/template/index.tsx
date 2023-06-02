@@ -1,6 +1,8 @@
 import React from 'react';
-import { Container } from './styles';
+
 import LateralMenu from './LateralMenu';
+
+import { Container } from './styles';
 
 type IProps = {
   children: React.ReactNode;

@@ -13,8 +13,8 @@ function LateralMenu() {
       </MenuNavigation>
 
       <MenuNavigation>
-        <Buttom to="/">Meu Perfil</Buttom>
-        <Buttom to="/">Sair</Buttom>
+        <Buttom to="/profile">Meu Perfil</Buttom>
+        <Buttom to="/logout">Sair</Buttom>
       </MenuNavigation>
     </Container>
   );
