@@ -30,7 +30,16 @@ export const Buttom = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.gray.main};
 
+  svg {
+    stroke: ${({ theme }) => theme.gray.main};
+    width: 24px;
+    height: 24px;
+  }
+
   &.active {
     color: ${({ theme }) => theme.primary.main};
+    svg {
+      stroke: ${({ theme }) => theme.primary.main};
+    }
   }
 `;
