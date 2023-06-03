@@ -1,13 +1,28 @@
 import React from 'react';
-import { TextComponent } from './styles';
+import { SpanComponent, TextComponent } from './styles';
 
 type IProps = {
-  font?: 'small' | 'medium' | 'large';
+  type?: 'p' | 'span';
+  size?: 'small' | 'medium' | 'large';
+  font?: 'regular' | 'thin' | 'bold' | 'semibold';
   children: React.ReactNode;
 };
 
-function Text({ children, font = 'medium' }: IProps) {
-  return <TextComponent font={font}>{children}</TextComponent>;
+function Text({ children, size = 'medium', font='regular', type = 'p' }: IProps) {
+
+  if (type === 'span') {
+    return (
+      <SpanComponent size="medium" font={font}>
+        {children}
+      </SpanComponent>
+    );
+  }
+
+  return (
+    <TextComponent size={size} font={font}>
+      {children}
+    </TextComponent>
+  );
 }
 
 export default Text;
