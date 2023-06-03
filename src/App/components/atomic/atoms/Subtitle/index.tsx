@@ -5,8 +5,8 @@ type IProps = {
   children: React.ReactNode;
 };
 
-function Title({ children }: IProps) {
+function Subtitle({ children }: IProps) {
   return <H2>{children}</H2>;
 }
 
-export default Title;
+export default Subtitle;
