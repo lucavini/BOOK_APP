@@ -20,7 +20,10 @@
       "~Styles/*": ["./App/Styles/*"],
       "@Pages/*": ["./App/Pages/*"],
       "@Components/*": ["./App/components/*"],
-      "@Assets/*": ["./App/assets/*"]
+      "@Assets/*": ["./App/assets/*"],
+      "@Atoms/*": ["./App/components/atomic/atoms/*"],
+      "@Molecules/*": ["./App/components/atomic/molecules/*"],
+      "@Organisms/*": ["./App/components/atomic/organisms/*"],
     },
 
     /* Linting */

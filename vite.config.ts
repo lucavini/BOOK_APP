@@ -24,6 +24,18 @@ export default defineConfig({
         find: '@Assets',
         replacement: path.resolve(__dirname, 'src/App/assets'),
       },
+      {
+        find: '@Atoms',
+        replacement: path.resolve(__dirname, 'src/App/components/atomic/atoms'),
+      },
+      {
+        find: '@Molecules',
+        replacement: path.resolve(__dirname, 'src/App/components/atomic/molecules'),
+      },
+      {
+        find: '@Organisms',
+        replacement: path.resolve(__dirname, 'src/App/components/atomic/organisms'),
+      },
     ],
   },
 });
