@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Title from '@Atoms/Title';
+import SubTitle from '@Atoms/Subtitle';
 import LateralMenu from './LateralMenu';
 
 import { Container, Section, Header, Content } from './styles';
@@ -17,8 +19,8 @@ function Template({ children, title, subtitle }: IProps) {
       <Container>
         <Section>
           <Header>
-            <h1>{title}</h1>
-            <h2>{subtitle}</h2>
+            <Title>{title}</Title>
+            <SubTitle>{subtitle}</SubTitle>
           </Header>
 
           <Content>{children}</Content>
