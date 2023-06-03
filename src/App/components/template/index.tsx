@@ -2,7 +2,7 @@ import React from 'react';
 
 import LateralMenu from './LateralMenu';
 
-import { Container } from './styles';
+import { Container, Section, Header, Content } from './styles';
 
 type IProps = {
   children: React.ReactNode;
@@ -12,18 +12,19 @@ type IProps = {
 
 function Template({ children, title, subtitle }: IProps) {
   return (
-    <Container>
+    <>
       <LateralMenu />
+      <Container>
+        <Section>
+          <Header>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
+          </Header>
 
-      <section>
-        <header>
-          <h1>{title}</h1>
-          <h2>{subtitle}</h2>
-        </header>
-
-        {children}
-      </section>
-    </Container>
+          <Content>{children}</Content>
+        </Section>
+      </Container>
+    </>
   );
 }
 
