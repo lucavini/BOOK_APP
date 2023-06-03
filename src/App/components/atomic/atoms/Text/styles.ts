@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-type ItextProps = {
-  size: 'small' | 'medium' | 'large';
-  font: 'regular' | 'thin' | 'bold' | 'semibold';
+export type ItextProps = {
+  size?: 'small' | 'medium' | 'large';
+  font?: 'regular' | 'thin' | 'bold' | 'semibold';
 };
 
 const textSizeVariants = {
@@ -36,8 +36,8 @@ export const TextComponent = styled('p')<ItextProps>`
   font-weight: 400;
   line-height: 150%;
   color: ${({ theme }) => theme.gray.dark};
-  ${({ size }) => textSizeVariants[size] || textSizeVariants.medium}
-  ${({ font }) => textFontVariants[font] || textFontVariants.regular}
+  ${({ size }) => textSizeVariants[size ?? 'medium']}
+  ${({ font }) => textFontVariants[font ?? 'regular']}
 `;
 
 export const SpanComponent = styled('span')<ItextProps>`
@@ -45,5 +45,5 @@ export const SpanComponent = styled('span')<ItextProps>`
   font-size: 18px;
   line-height: 120%;
   color: ${({ theme }) => theme.gray.dark};
-  ${({ font }) => textFontVariants[font] || textFontVariants.regular}
+  ${({ font }) => textFontVariants[font ?? 'regular']}
 `;

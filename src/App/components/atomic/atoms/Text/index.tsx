@@ -1,10 +1,8 @@
 import React from 'react';
-import { SpanComponent, TextComponent } from './styles';
+import { SpanComponent, TextComponent, ItextProps } from './styles';
 
-type IProps = {
+type IProps = ItextProps & {
   type?: 'p' | 'span';
-  size?: 'small' | 'medium' | 'large';
-  font?: 'regular' | 'thin' | 'bold' | 'semibold';
   children: React.ReactNode;
 };
 
