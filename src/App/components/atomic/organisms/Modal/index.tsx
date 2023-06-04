@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@Atoms/Buttom';
 import ReactPortal from '@Components/ReactPortal';
-import Subtitle from '@Components/atomic/atoms/Subtitle';
+import Title from '@Components/atomic/atoms/Title';
 import { Overlay, Container, Footer } from './styles';
 
 type ButtonProps = {
@@ -19,6 +19,7 @@ type ButtonProps = {
 type Props = {
   title: string;
   visible: boolean;
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>;
   danger?: boolean;
   isLoading?: boolean;
   children?: React.ReactNode;
@@ -30,6 +31,7 @@ function Modal({
   title,
   children,
   visible,
+  setVisible,
   cancelButtonProps,
   confirmButtonProps,
   isLoading = false,
@@ -40,9 +42,9 @@ function Modal({
 
   return (
     <ReactPortal containerId="modal-root">
-      <Overlay>
-        <Container>
-          <Subtitle>{title}</Subtitle>
+      <Overlay onClick={() => setVisible(false)}>
+        <Container onClick={e => e.stopPropagation()}>
+          <Title>{title}</Title>
 
           <div className="modal-body">{children}</div>
 
