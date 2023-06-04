@@ -19,7 +19,7 @@ export default {
 
   background: '#FAFAFA',
 
-  danger: '#A31E20',
+  danger: '#D73035',
 
   success: '#30D787',
 };
