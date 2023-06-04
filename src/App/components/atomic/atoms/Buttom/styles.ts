@@ -27,6 +27,7 @@ const DangerVariations = {
   secondary: css`
     border: 2px solid ${({ theme }) => theme.danger};
     color: ${({ theme }) => theme.danger};
+    background: transparent;
 
     &:hover {
       background: ${({ theme }) => theme.danger};
@@ -56,6 +57,7 @@ const DangerVariations = {
   smallSecondary: css`
     border: 2px solid ${({ theme }) => theme.danger};
     color: ${({ theme }) => theme.danger};
+    background: transparent;
 
     &:hover {
       background: ${({ theme }) => theme.danger};
@@ -80,6 +82,7 @@ const PrimaryVariations = {
   secondary: css`
     border: 2px solid ${({ theme }) => theme.primary.main};
     color: ${({ theme }) => theme.primary.main};
+    background: transparent;
 
     &:hover {
       background: ${({ theme }) => theme.primary.main};
@@ -114,6 +117,7 @@ const PrimaryVariations = {
     width: auto;
     border: 2px solid ${({ theme }) => theme.primary.main};
     color: ${({ theme }) => theme.primary.main};
+    background: transparent;
 
     &:hover {
       background: ${({ theme }) => theme.primary.main};
