@@ -6,12 +6,15 @@ import Trash from '@Assets/icons/trash.svg';
 import Details from '@Assets/icons/eye.svg';
 import Modal from '@Components/atomic/organisms/Modal';
 import React from 'react';
-import { BookDetailContainer, Footer, Info } from './styles';
 import Text from '@Components/atomic/atoms/Text';
 import Subtitle from '@Components/atomic/atoms/Subtitle';
 
+import { BookDetailContainer, DeleteDetail, Footer, Info } from './styles';
+
 function Home() {
   const [detailModal, setDetailModal] = React.useState(false);
+  const [deleteModal, setDeleteModal] = React.useState(false);
+
   return (
     <Template
       Icon={Order}
@@ -28,7 +31,7 @@ function Home() {
           },
           {
             icon: Trash,
-            onClick: () => console.log('teste'),
+            onClick: () => setDeleteModal(true),
           },
         ]}
       />
@@ -68,6 +71,33 @@ function Home() {
               R$ 40,00
             </Text>
           </Footer>
+        </BookDetailContainer>
+      </Modal>
+
+      <Modal
+        visible={deleteModal}
+        setVisible={setDeleteModal}
+        title="Excluir Registro"
+        cancelButtonProps={{
+          label: 'Manter',
+          danger: false,
+          onClick: () => console.log('manter'),
+        }}
+        confirmButtonProps={{
+          label: 'Excluir',
+          danger: true,
+          onClick: () => console.log('excluir'),
+        }}
+      >
+        <BookDetailContainer>
+          <DeleteDetail>
+            <Text size="medium">
+              Tem certeza que deseja excluir esse Livro:
+            </Text>
+            <Text font="semibold" size="large">
+              A menina que roubava livros
+            </Text>
+          </DeleteDetail>
         </BookDetailContainer>
       </Modal>
     </Template>

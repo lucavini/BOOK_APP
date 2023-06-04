@@ -17,7 +17,7 @@ type ButtonProps = {
 };
 
 type Props = {
-  title: string;
+  title?: string;
   visible: boolean;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
   danger?: boolean;
