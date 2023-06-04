@@ -98,7 +98,7 @@ const PrimaryVariations = {
   `,
 
   smallPrimary: css`
-    width: 101px;
+    width: auto;
     background: ${({ theme }) => theme.primary.main};
 
     &:hover {
@@ -111,7 +111,7 @@ const PrimaryVariations = {
   `,
 
   smallSecondary: css`
-    width: 101px;
+    width: auto;
     border: 2px solid ${({ theme }) => theme.primary.main};
     color: ${({ theme }) => theme.primary.main};
 
