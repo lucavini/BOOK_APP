@@ -37,7 +37,9 @@ const DangerVariations = {
 
   tertiary: css`
     background: none;
-    width: auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
     color: ${({ theme }) => theme.danger};
   `,
 
@@ -96,7 +98,9 @@ const PrimaryVariations = {
 
   tertiary: css`
     background: none;
-    width: auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
     color: ${({ theme }) => theme.primary.main};
   `,
 
