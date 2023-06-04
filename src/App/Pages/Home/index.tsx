@@ -1,29 +1,44 @@
 import Template from '@Components/template';
-import Text from '@Atoms/Text';
-import Buttom from '@Atoms/Buttom';
+import { ReactComponent as Order } from '@Assets/icons/order.svg';
+import Table from '@Components/atomic/organisms/Table';
+
+import Trash from '@Assets/icons/trash.svg';
+import Details from '@Assets/icons/eye.svg';
+import Modal from '@Components/atomic/organisms/Modal';
+import React from 'react';
 
 function Home() {
+  const [detailModal, setDetailModal] = React.useState(false);
   return (
-    <Template title="Vendas realizadas" subtitle="Visualize todas as vendas">
-      <Text font='thin' size='small'>texto</Text>
-      <Text font='regular' size='medium'>texto</Text>
-      <Text font='regular' size='large'>texto</Text>
-      <Text font='semibold' size='large'>texto</Text>
-      <Text font='bold' size='large'>texto</Text>
-      <Text type='span' font='semibold'>texto</Text>
+    <Template
+      Icon={Order}
+      title="Vendas realizadas"
+      subtitle="Visualize todas as vendas"
+    >
+      <Table
+        actionButtons={[
+          {
+            icon: Details,
+            onClick: () => {
+              setDetailModal(true);
+            },
+          },
+          {
+            icon: Trash,
+            onClick: () => console.log('teste'),
+          },
+        ]}
+      />
 
-      <Buttom>click</Buttom>
-      <Buttom variation='secondary'>click</Buttom>
-      <Buttom variation='tertiary'>click</Buttom>
-      <Buttom variation='smallPrimary'>click</Buttom>
-      <Buttom variation='smallSecondary'>click here</Buttom>
-
-      <Buttom danger>click</Buttom>
-      <Buttom variation='secondary' danger>click</Buttom>
-      <Buttom variation='tertiary' danger>click</Buttom>
-
-      <Buttom variation='smallPrimary' danger>click</Buttom>
-      <Buttom variation='smallSecondary' danger>click</Buttom>
+      <Modal
+        visible={detailModal}
+        setVisible={setDetailModal}
+        title="A menina que roubava livros"
+        cancelButtonProps={{
+          label: 'Excluir Registro',
+          onClick: () => console.log('excluir'),
+        }}
+      />
     </Template>
   );
 }
