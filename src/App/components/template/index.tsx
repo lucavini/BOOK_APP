@@ -10,16 +10,20 @@ type IProps = {
   children: React.ReactNode;
   title: string;
   subtitle: string;
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 };
 
-function Template({ children, title, subtitle }: IProps) {
+function Template({ children, title, subtitle, Icon }: IProps) {
   return (
     <>
       <LateralMenu />
       <Container>
         <Section>
           <Header>
-            <Title>{title}</Title>
+            <div>
+              <Icon stroke="#333333" />
+              <Title>{title}</Title>
+            </div>
             <SubTitle>{subtitle}</SubTitle>
           </Header>
 

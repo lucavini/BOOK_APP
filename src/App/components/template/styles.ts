@@ -20,6 +20,14 @@ export const Header = styled('header')`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  div {
+    display: flex;
+    align-items: center;
+    h1 {
+      margin-left: 8px;
+    }
+  }
 `;
 
 export const Content = styled('section')`
