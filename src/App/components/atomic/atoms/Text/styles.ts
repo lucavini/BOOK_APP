@@ -42,7 +42,6 @@ export const TextComponent = styled('p')<ItextProps>`
 
 export const SpanComponent = styled('span')<ItextProps>`
   font-weight: 400;
-  font-size: 18px;
   line-height: 120%;
   color: ${({ theme }) => theme.gray.dark};
   ${({ font }) => textFontVariants[font ?? 'regular']}

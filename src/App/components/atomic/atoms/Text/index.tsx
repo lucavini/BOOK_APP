@@ -10,7 +10,7 @@ function Text({ children, size = 'medium', font='regular', type = 'p' }: IProps)
 
   if (type === 'span') {
     return (
-      <SpanComponent size="medium" font={font}>
+      <SpanComponent size={size} font={font}>
         {children}
       </SpanComponent>
     );
