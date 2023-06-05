@@ -9,6 +9,8 @@ import React from 'react';
 import Text from '@Components/atomic/atoms/Text';
 import Subtitle from '@Components/atomic/atoms/Subtitle';
 
+import Sales from '~Shared/Mocks/Sales.json';
+
 import { BookDetailContainer, DeleteDetail, Footer, Info } from './styles';
 
 function Home() {
@@ -22,6 +24,8 @@ function Home() {
       subtitle="Visualize todas as vendas"
     >
       <Table
+        headerData={['ID', 'Data', 'Título', 'Gênero', 'Preço', 'Ações']}
+        data={Sales}
         actionButtons={[
           {
             icon: Details,
