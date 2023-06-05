@@ -24,7 +24,7 @@ function Home() {
       subtitle="Visualize todas as vendas"
     >
       <Table
-        headerData={['ID', 'Data', 'Título', 'Gênero', 'Preço', 'Ações']}
+        headerData={['Data', 'Título', 'Gênero', 'Preço', 'Ações']}
         data={Sales}
         actionButtons={[
           {
