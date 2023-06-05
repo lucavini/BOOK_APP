@@ -31,6 +31,7 @@ export const Row = styled('tr')`
 
     .action-buttoms {
       display: flex;
+      max-width: 60px;
       justify-content: space-between;
 
       div {

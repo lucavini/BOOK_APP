@@ -9,7 +9,7 @@ type IActionButtonsProps = {
 type Iprops = {
   actionButtons?: IActionButtonsProps[];
   headerData: string[];
-  data: models.BooksSaled[];
+  data: models.BooksSaled[] | models.BooksStoreged[];
 };
 
 function Table({ actionButtons, headerData, data }: Iprops) {
@@ -26,13 +26,16 @@ function Table({ actionButtons, headerData, data }: Iprops) {
       <Body>
         {data.map((item) => (
           <Row key={item.id}>
-            {Object.entries(item).map(([key, value]) => (
-              <td key={key}>
-                <Text size="small" font="regular">
-                  {value}
-                </Text>
-              </td>
-            ))}
+            {Object.entries(item).map(
+              ([key, value]) =>
+                key !== 'id' && (
+                  <td key={key}>
+                    <Text size="small" font="regular">
+                      {value}
+                    </Text>
+                  </td>
+                ),
+            )}
 
             <td>
               <div className="action-buttoms">
