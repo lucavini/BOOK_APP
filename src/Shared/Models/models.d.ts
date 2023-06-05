@@ -7,7 +7,7 @@ export interface BooksSaled {
   subject: string;
   price: string;
 }
-export interface BooksStoreged {
+export interface BooksStoraged {
   id: string;
   title: string;
   cover: string;

@@ -9,7 +9,7 @@ type IActionButtonsProps = {
 type Iprops = {
   actionButtons?: IActionButtonsProps[];
   headerData: string[];
-  data: models.BooksSaled[] | models.BooksStoreged[];
+  data: models.BooksSaled[] | models.BooksStoraged[];
 };
 
 function Table({ actionButtons, headerData, data }: Iprops) {
