@@ -7,3 +7,10 @@ export interface BooksSaled {
   subject: string;
   price: string;
 }
+export interface BooksStoreged {
+  id: string;
+  title: string;
+  cover: string;
+  subject: string;
+  price: string;
+}
