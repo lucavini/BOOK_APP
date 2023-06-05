@@ -24,6 +24,7 @@
       "@Atoms/*": ["./App/components/atomic/atoms/*"],
       "@Molecules/*": ["./App/components/atomic/molecules/*"],
       "@Organisms/*": ["./App/components/atomic/organisms/*"],
+      "~Shared/*": ["./Shared/*"],
     },
 
     /* Linting */

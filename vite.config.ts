@@ -36,6 +36,10 @@ export default defineConfig({
         find: '@Organisms',
         replacement: path.resolve(__dirname, 'src/App/components/atomic/organisms'),
       },
+      {
+        find: '~Shared',
+        replacement: path.resolve(__dirname, 'src/Shared'),
+      },
     ],
   },
 });
